@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Apple watch </title>
+</head>
+
+<body>
+    <div class="product_page">
+        <nav class="navBar">
+            <div class="logo">
+                <img src="/watches/image6.png" alt="logo" class="logo_img">
+            </div>
+            <div class="link_container">
+                <a href="" class="active">home</a>
+                <a href="">about</a>
+                <a href="">order</a>
+                <a href=""><i class='bx bxs-user'>login</i></a>
+            </div>
+            <a href=""><i class='bx bxs-cart-add'></i></a>
+
+        </nav>
+        <div class="product_container">
+            <div class="img_product">
+                <div class="images">
+                    <img src="/watches/image3.png" alt="product_img" class="img active">
+                    <img src="/watches/image4.png" alt="product_img" class="img">
+                    <img src="/watches/image2.png" alt="product_img" class="img">
+                    <img src="/watches/image5.png" alt="product_img" class="img">
+                    <img src="/watches/image1.png" alt="product_img" class="img">
+                </div>
+                
+                <div class="slide_btns">
+                    <i id="left" class='bx bxs-left-arrow-square'></i>
+                    <i id="right" class='bx bxs-right-arrow-square'></i>
+                </div>
+            </div>
+            
+            
+            <div class="product_description">
+                <h1>Apple watch series 6</h1>
+                <h5>key features:</h5>
+                <ul>
+                    <li>Measure your blood oxygen level</li>
+                    <li>Take an ECG anytime. Anywhere</li>
+                    <li>The new sleep app</li>
+                    <li>Water resistance</li>
+                    <li>The Always-On Retina LTPO OLED Display</li>
+                </ul>
+                <span class="price" data-text="$600/-">$200/-</span>
+
+                <div class="btns">
+                    <button class="btn">Add to cart</button>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        
+        </div>
+        <footer class="social_icons">
+            <i class='bx bxl-facebook-square'></i>
+            <i class='bx bxl-linkedin-square'></i>
+            <i class='bx bxl-github'></i>
+        </footer>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('#right').click(function () {
+            $('.img_product').find('.active').next().addClass('active')
+            $('.img_product').find('.active').prev().removeClass('active')
+        })
+
+        $('#left').click(function () {
+            $('.img_product').find('.active').prev().addClass('active')
+            $('.img_product').find('.active').next().removeClass('active')
+        })
+    })
+</script>
+
+</html>
