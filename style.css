@@ -140,6 +140,7 @@ position: relative;
   font-weight: 900;
   text-decoration: line-through;
 }
+
 footer{
   display: flex;
   align-items: center;
@@ -176,14 +177,14 @@ footer>.bx:hover{
     margin-top: -30%;
   }
 }
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1000px){
  
   .product_description{
     margin-left: 30%;
     margin-top: 5%;
   }
   .price::after{
-    left: 65%;
+    left: 68%;
   }
   .product_container .img_product{
     margin-top: -30%;
@@ -191,5 +192,17 @@ footer>.bx:hover{
   }
   .img_product .images img{
     left: 30%;
+  }
+}
+@media(max-width: 768px){
+  .product_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .price::after{
+    left: 40%;
   }
 }
